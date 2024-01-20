@@ -29,10 +29,6 @@ services:
       interval: 5s
       retries: 10
     image: supabase/logflare:1.4.0
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30010"
-      kompose.service.type: nodeport
     networks:
       default: null
     ports:
@@ -90,10 +86,6 @@ services:
       interval: 5s
       retries: 3
     image: supabase/gotrue:v2.132.3
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30002"
-      kompose.service.type: nodeport
     networks:
       default: null
     restart: unless-stopped
@@ -127,10 +119,6 @@ services:
       interval: 5s
       retries: 10
     image: supabase/postgres:15.1.0.147
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30011"
-      kompose.service.type: nodeport
     networks:
       default: null
     ports:
@@ -194,10 +182,6 @@ services:
       SUPABASE_URL: http://kong:8000
       VERIFY_JWT: "false"
     image: supabase/edge-runtime:v1.29.1
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30009"
-      kompose.service.type: nodeport
     networks:
       default: null
     restart: always
@@ -224,10 +208,6 @@ services:
       interval: 5s
       retries: 3
     image: darthsim/imgproxy:v3.8.0
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30007"
-      kompose.service.type: nodeport
     networks:
       default: null
     volumes:
@@ -260,10 +240,6 @@ services:
       SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJhbm9uIiwKICAgICJpc3MiOiAic3VwYWJhc2UtZGVtbyIsCiAgICAiaWF0IjogMTY0MTc2OTIwMCwKICAgICJleHAiOiAxNzk5NTM1NjAwCn0.dc_X5iR_VP_qT0zsiyj_I_OZ2T9FtRU2BBNWN8Bu4GE
       SUPABASE_SERVICE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJzZXJ2aWNlX3JvbGUiLAogICAgImlzcyI6ICJzdXBhYmFzZS1kZW1vIiwKICAgICJpYXQiOiAxNjQxNzY5MjAwLAogICAgImV4cCI6IDE3OTk1MzU2MDAKfQ.DaYlNEoUrrEn2Ig7tqibS-PHK5vgusbcbo7X36XVt4Q
     image: kong:2.8.1
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30000"
-      kompose.service.type: nodeport
     networks:
       default: null
     ports:
@@ -347,10 +323,6 @@ services:
       interval: 5s
       retries: 3
     image: supabase/realtime:v2.25.50
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30004"
-      kompose.service.type: nodeport
     networks:
       default: null
     restart: unless-stopped
@@ -419,10 +391,6 @@ services:
       interval: 5s
       retries: 3
     image: supabase/storage-api:v0.43.11
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30005"
-      kompose.service.type: nodeport
     networks:
       default: null
     restart: unless-stopped
@@ -463,10 +431,6 @@ services:
       interval: 5s
       retries: 3
     image: supabase/studio:20240101-8e4a094
-    labels:
-      kompose.controller.type: deployment
-      kompose.service.nodeport.port: "30001"
-      kompose.service.type: nodeport
     networks:
       default: null
     restart: unless-stopped
